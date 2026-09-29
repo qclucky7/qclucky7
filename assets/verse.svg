@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
   <title id="title">水墨古语轮播</title>
-  <desc id="desc">靡不有初，鲜克有终；东隅已逝，桑榆非晚；行远自迩，笃行不怠。</desc>
+  <desc id="desc">靡不有初，鲜克有终；慎终如始，则无败事；行远自迩，笃行不怠。</desc>
 
   <style>
     .verse {
@@ -111,8 +111,8 @@
   </g>
 
   <g class="quote quote-two" text-anchor="end">
-    <text class="verse" x="892" y="344">东隅已逝</text>
-    <text class="verse second-line" x="892" y="414">桑榆非晚</text>
+    <text class="verse" x="892" y="344">慎终如始</text>
+    <text class="verse second-line" x="892" y="414">则无败事</text>
   </g>
 
   <g class="quote quote-three" text-anchor="end">

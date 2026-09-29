@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
-  <title id="title">行远自迩，笃行不怠</title>
-  <desc id="desc">以黑白水墨文字排版呈现的古语</desc>
+  <title id="title">水墨古语轮播</title>
+  <desc id="desc">靡不有初，鲜克有终；东隅已逝，桑榆非晚；为学日益，为道日损。</desc>
 
   <style>
     .verse {
@@ -15,10 +15,29 @@
       fill-opacity: 0.72;
     }
 
+    .quote {
+      opacity: 0;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: turn-page 18s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+    }
+
+    .quote-one {
+      animation-delay: -0.72s;
+    }
+
+    .quote-two {
+      animation-delay: 5.28s;
+    }
+
+    .quote-three {
+      animation-delay: 11.28s;
+    }
+
     .cursor {
       stroke: #161616;
       stroke-width: 4;
-      animation: blink 1.8s steps(1, end) infinite;
+      animation: cursor-cycle 6s steps(1, end) infinite;
     }
 
     .thought,
@@ -38,14 +57,36 @@
       fill-opacity: 0.72;
     }
 
-    @keyframes blink {
-      0%, 54% { opacity: 1; }
-      55%, 100% { opacity: 0; }
+    @keyframes turn-page {
+      0% {
+        opacity: 0;
+        transform: translateX(18px);
+      }
+      4%, 28% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      34%, 100% {
+        opacity: 0;
+        transform: translateX(-18px);
+      }
+    }
+
+    @keyframes cursor-cycle {
+      0%, 14%, 42%, 70% { opacity: 0; }
+      15%, 41%, 71%, 92% { opacity: 1; }
+      93%, 100% { opacity: 0; }
     }
 
     @media (prefers-reduced-motion: reduce) {
+      .quote,
       .cursor {
         animation: none;
+      }
+
+      .quote-one {
+        opacity: 1;
+        transform: none;
       }
     }
   </style>
@@ -64,9 +105,19 @@
     <text x="112" y="406">}</text>
   </g>
 
-  <g text-anchor="end">
-    <text class="verse" x="892" y="344">行远自迩</text>
-    <text class="verse second-line" x="892" y="414">笃行不怠</text>
+  <g class="quote quote-one" text-anchor="end">
+    <text class="verse" x="892" y="344">靡不有初</text>
+    <text class="verse second-line" x="892" y="414">鲜克有终</text>
+  </g>
+
+  <g class="quote quote-two" text-anchor="end">
+    <text class="verse" x="892" y="344">东隅已逝</text>
+    <text class="verse second-line" x="892" y="414">桑榆非晚</text>
+  </g>
+
+  <g class="quote quote-three" text-anchor="end">
+    <text class="verse" x="892" y="344">为学日益</text>
+    <text class="verse second-line" x="892" y="414">为道日损</text>
   </g>
 
   <line class="cursor" x1="908" y1="414" x2="940" y2="414" />

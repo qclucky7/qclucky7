@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">行远自迩，笃行不怠</title>
+  <desc id="desc">以黑白水墨文字排版呈现的古语</desc>
+
+  <style>
+    .verse {
+      fill: #161616;
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+    }
+
+    .second-line {
+      fill-opacity: 0.72;
+    }
+
+    .cursor {
+      stroke: #161616;
+      stroke-width: 4;
+      animation: blink 1.8s steps(1, end) infinite;
+    }
+
+    .thought,
+    .code {
+      fill: #4e4e4b;
+      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      font-weight: 400;
+    }
+
+    .thought {
+      font-size: 17px;
+      letter-spacing: 0.04em;
+    }
+
+    .code {
+      font-size: 16px;
+      fill-opacity: 0.72;
+    }
+
+    @keyframes blink {
+      0%, 54% { opacity: 1; }
+      55%, 100% { opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cursor {
+        animation: none;
+      }
+    }
+  </style>
+
+  <rect width="1000" height="560" fill="#fbfbfa" />
+
+  <g class="thought">
+    <text x="112" y="270">code is thought</text>
+    <text x="112" y="294">made visible.</text>
+  </g>
+
+  <g class="code">
+    <text x="112" y="334">while (curious) {</text>
+    <text x="136" y="358">observe();</text>
+    <text x="136" y="382">build();</text>
+    <text x="112" y="406">}</text>
+  </g>
+
+  <g text-anchor="end">
+    <text class="verse" x="892" y="344">行远自迩</text>
+    <text class="verse second-line" x="892" y="414">笃行不怠</text>
+  </g>
+
+  <line class="cursor" x1="908" y1="414" x2="940" y2="414" />
+</svg>
